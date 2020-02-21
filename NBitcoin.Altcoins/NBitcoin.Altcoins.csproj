@@ -1,12 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Company>Metaco SA</Company>
+		<Company>DevelCurrency</Company>
 		<Copyright>Copyright © Metaco SA 2017</Copyright>
 		<Description>The C# Bitcoin Library</Description>
     <PackageIcon>icon.png</PackageIcon>
-		<PackageId>NBitcoin.Altcoins</PackageId>
-		<PackageTags>bitcoin,altcoins,bcash,bgold,bitcore,dash,terracoin,dogecoin,dystem,feathercoin,groestlcoin,litecoin,monacoin,polis,ufo,viacoin,zclassic,liquid</PackageTags>
-		<PackageProjectUrl>https://github.com/MetacoSA/NBitcoin</PackageProjectUrl>
+		<PackageId>NBitcoin.Altcoins.DevelCurrency</PackageId>
+		<PackageTags>bitcoin,altcoins,bcash,bgold,bitcore,dash,dogecoin,dystem,feathercoin,groestlcoin,litecoin,monacoin,polis,ufo,viacoin,zclassic,buycoinpos</PackageTags>
+		<PackageProjectUrl>https://github.com/DevelCurrency/NBitcoin</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
@@ -17,7 +17,10 @@
     <TargetFrameworks Condition="'$(TargetFrameworkOverride)' != ''">$(TargetFrameworkOverride)</TargetFrameworks>
 		<NoWarn>1591;1573;1572;1584;1570;3021</NoWarn>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>2.0.5.1</Version>
+    <Version>2.0.5.3</Version>
+    <AssemblyVersion>2.0.5.2</AssemblyVersion>
+    <FileVersion>2.0.5.2</FileVersion>
+    <Authors>NBitcoin.Altcoins.DevelCurrency</Authors>
 	</PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\NBitcoin\NBitcoin.csproj" />
