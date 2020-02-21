@@ -91,17 +91,6 @@ namespace NBitcoin
 			}
 		}
 
-		private static Wordlist _Czech;
-		public static Wordlist Czech
-		{
-			get
-			{
-				if (_Czech == null)
-					_Czech = LoadWordList(Language.Czech).Result;
-				return _Czech;
-			}
-		}
-
 		public static Task<Wordlist> LoadWordList(Language language)
 		{
 			string name = GetLanguageFileName(language);
@@ -133,9 +122,6 @@ namespace NBitcoin
 					break;
 				case Language.PortugueseBrazil:
 					name = "portuguese_brazil";
-					break;
-				case Language.Czech:
-					name = "czech";
 					break;
 				default:
 					throw new NotSupportedException(language.ToString());
@@ -257,7 +243,7 @@ namespace NBitcoin
 		}
 		public static Language AutoDetectLanguage(string[] words)
 		{
-			List<int> languageCount = new List<int>(new int[] { 0, 0, 0, 0, 0, 0, 0, 0 });
+			List<int> languageCount = new List<int>(new int[] { 0, 0, 0, 0, 0, 0, 0 });
 			int index;
 
 			foreach (string s in words)
@@ -301,12 +287,6 @@ namespace NBitcoin
 					//portuguese_brazil is at 6
 					languageCount[6]++;
 				}
-
-				if (Wordlist.Czech.WordExists(s, out index))
-				{
-					//czech is at 7
-					languageCount[7]++;
-				}
 			}
 
 			//no hits found for any language unknown
@@ -348,10 +328,6 @@ namespace NBitcoin
 			else if (languageCount.IndexOf(languageCount.Max()) == 6)
 			{
 				return Language.PortugueseBrazil;
-			}
-			else if (languageCount.IndexOf(languageCount.Max()) == 7)
-			{
-				return Language.Czech;
 			}
 			return Language.Unknown;
 		}

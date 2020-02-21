@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Company>DevelCurreny</Company>
@@ -20,8 +20,8 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 	</PropertyGroup>
 	<PropertyGroup>
-    <TargetFrameworks>net461;net452;netstandard1.3;netstandard1.1;netcoreapp2.1;netstandard2.1;netstandard2.0</TargetFrameworks>
-		<TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">netstandard2.1</TargetFrameworks>
+    <TargetFrameworks>net461;net452;netstandard1.3;netstandard1.1;netcoreapp2.1;netcoreapp3.1;netstandard2.1;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">netcoreapp2.1;netcoreapp3.1;netstandard2.1;netstandard2.0</TargetFrameworks>
     <TargetFrameworks Condition="'$(TargetFrameworkOverride)' != ''">$(TargetFrameworkOverride)</TargetFrameworks>
 		<NoWarn>1591;1573;1572;1584;1570;3021</NoWarn>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
@@ -78,6 +78,15 @@
 
 	<ItemGroup>
     <None Include="..\icon.png" Pack="true" PackagePath="\" />
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
 		<None Update="BitcoinStream.Partial.tt">
 			<Generator>TextTemplatingFileGenerator</Generator>
 			<LastGenOutput>BitcoinStream.Partial.cs</LastGenOutput>
@@ -96,15 +105,18 @@
 	</Target>
 
 	<PropertyGroup>
-		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\NBitcoin.xml</DocumentationFile>
+		<DocumentationFile></DocumentationFile>
 		<Authors>NBitcoin.DevelCurreny</Authors>
 		<PackageId>NBitcoin.DevelCurreny</PackageId>
 		<AssemblyName>NBitcoin</AssemblyName>
 		<Product>NBitcoin</Product>
-		<AssemblyVersion>5.0.15.0</AssemblyVersion>
-		<FileVersion>5.0.15.0</FileVersion>
+		<AssemblyVersion>5.0.16.0</AssemblyVersion>
+		<FileVersion>5.0.16.0</FileVersion>
 		<SignAssembly>false</SignAssembly>
 		<DelaySign>true</DelaySign>
-		<Version>5.0.15</Version>
+		<Version>5.0.16</Version>
+		<UserSecretsId>945ab3f3-7067-44e9-8a36-deb26e1e3c61</UserSecretsId>
+		<GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+		<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 	</PropertyGroup>
 </Project>

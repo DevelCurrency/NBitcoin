@@ -14,7 +14,6 @@ Currently supported altcoins are:
 * Litecoin
 * Monacoin
 * Polis
-* Terracoin
 * UFO
 * Viacoin
 * Zclassic

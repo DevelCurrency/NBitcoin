@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<Company>DevelCurrency</Company>
 		<Copyright>Copyright © Metaco SA 2017</Copyright>
@@ -12,15 +12,18 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<Version Condition=" '$(Version)' == '' ">2.0.5</Version>
-		<TargetFrameworks>net452;netstandard1.3;netstandard2.0</TargetFrameworks>
-		<TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">netstandard2.1</TargetFrameworks>
+		<TargetFrameworks>net452;netstandard1.3;netstandard2.0;netcoreapp3.1;</TargetFrameworks>
+		<TargetFrameworks Condition="'$(BuildingInsideVisualStudio)' == 'true'">netcoreapp2.1;netcoreapp3.1;netstandard2.1;netstandard2.0</TargetFrameworks>
     <TargetFrameworks Condition="'$(TargetFrameworkOverride)' != ''">$(TargetFrameworkOverride)</TargetFrameworks>
 		<NoWarn>1591;1573;1572;1584;1570;3021</NoWarn>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <Version>2.0.5.3</Version>
-    <AssemblyVersion>2.0.5.2</AssemblyVersion>
-    <FileVersion>2.0.5.2</FileVersion>
+    <Version>2.0.5.4</Version>
+    <AssemblyVersion>2.0.5.4</AssemblyVersion>
+    <FileVersion>2.0.5.4</FileVersion>
     <Authors>NBitcoin.Altcoins.DevelCurrency</Authors>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <ApplicationIcon />
+    <Win32Resource />
 	</PropertyGroup>
 	<ItemGroup>
 		<ProjectReference Include="..\NBitcoin\NBitcoin.csproj" />
