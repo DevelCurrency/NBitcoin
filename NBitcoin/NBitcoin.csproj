@@ -1,18 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<Company>Metaco SA</Company>
+		<Company>DevelCurreny</Company>
 		<Copyright>Copyright © Metaco SA 2017</Copyright>
 		<Description>The C# Bitcoin Library</Description>
     <PackageIcon>icon.png</PackageIcon>
-		<PackageTags>bitcoin</PackageTags>
-		<PackageProjectUrl>https://github.com/MetacoSA/NBitcoin</PackageProjectUrl>
+		<PackageTags>bitcoin,BuyCoinPos</PackageTags>
+		<PackageProjectUrl>https://github.com/DevelCurrency/NBitcoin</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<RepositoryUrl>https://github.com/MetacoSA/NBitcoin</RepositoryUrl>
+		<RepositoryUrl>https://github.com/DevelCurrency/NBitcoin</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 	<PropertyGroup>
-		<Version Condition=" '$(Version)' == '' ">5.0.14</Version>
+		<Version Condition=" '$(Version)' == '' ">5.0.13</Version>
 		<LangVersion>8.0</LangVersion>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -97,5 +97,14 @@
 
 	<PropertyGroup>
 		<DocumentationFile>bin\$(Configuration)\$(TargetFramework)\NBitcoin.xml</DocumentationFile>
+		<Authors>NBitcoin.DevelCurreny</Authors>
+		<PackageId>NBitcoin.DevelCurreny</PackageId>
+		<AssemblyName>NBitcoin</AssemblyName>
+		<Product>NBitcoin</Product>
+		<AssemblyVersion>5.0.15.0</AssemblyVersion>
+		<FileVersion>5.0.15.0</FileVersion>
+		<SignAssembly>false</SignAssembly>
+		<DelaySign>true</DelaySign>
+		<Version>5.0.15</Version>
 	</PropertyGroup>
 </Project>
